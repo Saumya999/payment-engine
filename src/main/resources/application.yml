@@ -41,6 +41,12 @@ simulation:
     # Execute approximately every 60 seconds
     fixed-delay-ms: 60000
 
+  bank-account:
+    enabled: false
+    #generate 3 bank accounts per minute
+    batch-size: 3
+    fixed-delay-ms: 60000
+
 logging:
   level:
     root: INFO
