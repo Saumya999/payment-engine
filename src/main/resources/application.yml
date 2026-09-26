@@ -1,0 +1,47 @@
+spring:
+
+  application:
+    name: payment-engine
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/payments
+    username: upi_payment
+    password: payment
+
+    hikari:
+      maximum-pool-size: 20
+      minimum-idle: 5
+      connection-timeout: 30000
+      idle-timeout: 600000
+      max-lifetime: 1800000
+
+  jpa:
+    open-in-view: false
+
+    hibernate:
+      ddl-auto: validate
+
+    properties:
+      hibernate:
+        format_sql: true
+        jdbc:
+          batch_size: 50
+
+  flyway:
+    enabled: false
+
+server:
+  port: 8080
+
+simulation:
+  customer:
+    enabled: false
+    # Generate 10 customers per scheduler execution
+    batch-size: 10
+    # Execute approximately every 60 seconds
+    fixed-delay-ms: 60000
+
+logging:
+  level:
+    root: INFO
+    com.payment.engine: INFO
