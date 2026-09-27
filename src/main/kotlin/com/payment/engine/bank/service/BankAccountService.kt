@@ -77,7 +77,7 @@ class BankAccountService(
 
         val now = java.time.Instant.now()
 
-        val bankCodes = listOf("HDFC", "ICICI", "SBI", "AXIS", "SC", "AMEX", "JPMC", "PNB", "BOI", "BOM", "BOB", "UBI", "UCO", "BAND")
+        val bankCodes = listOf("HDFC", "ICICI", "SBI", "AXIS", "SC", "AMEX", "JPMC", "PNB", "BOI", "BOM", "BOB", "UBI", "UCO", "BAND","KOTAK")
         val bankCode = bankCodes.random()
 
         val account = BankAccount(

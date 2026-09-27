@@ -17,13 +17,14 @@ class BankAccountScheduler(
         LoggerFactory.getLogger(BankAccountScheduler::class.java)
 
     @Scheduled(
-        fixedDelayString = "\${simulation.bank-account.fixed-delay-ms}"
+        fixedDelayString = "\${simulation.bank-account.fixed-delay-ms}",
+        initialDelayString = "\${simulation.bank-account.initial-delay-ms}"
     )
     fun runSimulation() {
 
         if (!properties.enabled) {
 
-            log.debug(
+            log.info(
                 "Bank account simulation is disabled"
             )
 

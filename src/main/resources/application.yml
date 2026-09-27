@@ -35,17 +35,26 @@ server:
 
 simulation:
   customer:
-    enabled: false
+    enabled: true
     # Generate 10 customers per scheduler execution
     batch-size: 10
     # Execute approximately every 60 seconds
     fixed-delay-ms: 60000
+    initial-delay-ms: 0
 
   bank-account:
-    enabled: false
+    enabled: true
     #generate 3 bank accounts per minute
+    batch-size: 5
+    fixed-delay-ms: 60000
+    initial-delay-ms: 10000
+
+  upi-registration:
+    enabled: true
     batch-size: 3
     fixed-delay-ms: 60000
+    failure-rate-percent: 20
+    initial-delay-ms: 60000
 
 logging:
   level:

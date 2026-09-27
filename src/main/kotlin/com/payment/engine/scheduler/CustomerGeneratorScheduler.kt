@@ -19,7 +19,9 @@ class CustomerGeneratorScheduler(
 
     @Scheduled(
         fixedDelayString =
-            "\${simulation.customer.fixed-delay-ms}"
+            "\${simulation.customer.fixed-delay-ms}",
+        initialDelayString =
+            "\${simulation.customer.initial-delay-ms}"
     )
     fun generateCustomers() {
 
