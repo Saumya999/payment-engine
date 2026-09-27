@@ -56,6 +56,13 @@ simulation:
     failure-rate-percent: 20
     initial-delay-ms: 60000
 
+  merchant:
+    enabled: true
+    batch-size: 5
+    fixed-delay-ms: 60000
+    initial-delay-ms: 0
+    failure-rate-percent: 10
+
 logging:
   level:
     root: INFO
